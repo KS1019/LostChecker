@@ -44,11 +44,8 @@
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
-    self.profilePictureView.profileID = [user objectID];
+    self.profilePictureView.profileID = user.objectID;
     self.nameLabel.text = user.name;
-    
-
-    
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
